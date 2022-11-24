@@ -2,6 +2,7 @@
 name: AutomatePythonTests
 
 on:
+  push :
   schedule:
     - cron: "15 14 * * 4"
   workflow_dispatch:
