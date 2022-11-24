@@ -22,4 +22,4 @@ jobs:
       fail-fast: false
     steps:
       - name: Execute tests
-        run: python my-python-project/Basic_Test.py
+        run: python Basic_Test.py
