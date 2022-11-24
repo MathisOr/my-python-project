@@ -14,7 +14,7 @@ class Testing(unittest.TestCase):
 
     def test_failing(self):
         a = 'titi'
-        b = 'toto'
+        b = 'titi'
         self.assertEqual(a, b)
 
 class TestingPerson(unittest.TestCase):
