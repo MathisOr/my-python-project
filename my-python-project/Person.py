@@ -1,3 +1,6 @@
+import unittest
+import Person
+
 class Person:
     name = []
 
@@ -10,7 +13,8 @@ class Person:
             return 'There is no such user'
         else:
             return self.name[user_id]
-
+    def count(self):
+        return len(self.name)
 
 if __name__ == '__main__':
     person = Person()
