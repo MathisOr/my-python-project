@@ -1,0 +1,25 @@
+---
+name: AutomatePythonTests
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  Execute_Script:
+    runs-on: [ubuntu-latest]
+    strategy:
+      fail-fast: false
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+      - name: Run script
+        run: python my-python-project/Person.py
+  Tests:
+    runs-on: [ubuntu-latest]
+    needs: Execute_Script
+    strategy:
+      fail-fast: false
+    steps:
+      - name: Execute tests
+        run: python my-python-project/Basic_Test.py
