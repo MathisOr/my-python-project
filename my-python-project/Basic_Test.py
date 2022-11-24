@@ -24,7 +24,7 @@ class TestingPerson(unittest.TestCase):
         self.assertEqual(first_id, 0)
         second_id = person.set_name('Bob')
         self.assertEqual(second_id, 1)
-        self.assertEquam(first_id, second_id)
+        
 
 if __name__ == '__main__':
     unittest.main()
